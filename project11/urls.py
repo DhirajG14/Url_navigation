@@ -16,9 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from Jsp.views import *
+from Django.views import *
+import Jsp,Python
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('Jsp/',include('Jsp.urls')),
-    path('Students/',Students,name='Students')
+    path('Students/',Students,name='Students'),
+    path('harshad/',harshad,name='harshad'),
+    path('Python/',include('Python.urls')),
 ]
